@@ -61,10 +61,13 @@
       &:not(:last-child)
         @media screen and (min-width: 768px)
           margin-right: 3.2rem
-    &.open
-      animation: slide-in 600ms ease-in-out forwards
+    &.slidein
       display: flex
-
+      animation: slide-in 600ms ease-in-out forwards
+    &.slideout
+      display: flex
+      animation: slide-out 600ms ease-in-out forwards
+  
   &__hamburger
     cursor: pointer
     width: 3rem

@@ -224,13 +224,24 @@ button {
 
 @keyframes slide-in {
   from {
-    top: 10rem;
+    top: 0;
   }
   50% {
     top: 14rem;
   }
   to {
     top: 12.1rem;
+  }
+}
+@keyframes slide-out {
+  from {
+    top: 12.1rem;
+  }
+  50% {
+    top: 14rem;
+  }
+  to {
+    top: -100%;
   }
 }
 .header {
@@ -321,9 +332,13 @@ button {
     margin-right: 3.2rem;
   }
 }
-.header__links.open {
-  animation: slide-in 600ms ease-in-out forwards;
+.header__links.slidein {
   display: flex;
+  animation: slide-in 600ms ease-in-out forwards;
+}
+.header__links.slideout {
+  display: flex;
+  animation: slide-out 600ms ease-in-out forwards;
 }
 .header__hamburger {
   cursor: pointer;
